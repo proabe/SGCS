@@ -1,0 +1,7 @@
+> This project use api keys and it's not wise to upload api keys in code to a public repo,
+ therefore the before you start using this application please replace the string "Enter_Your_Key"
+ in code with your api key in the following files on specified line numbers.
+> profile.php -> line:46
+> route.php ->	line:12,
+		line:15,
+		line:18 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sign Up or Sign In :-) </title>	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" async defer>
+    	document.addEventListener('DOMContentLoaded', function(){
+    		$('#toright').click(function(event) {
+    			$('.cube .front').css({"transform":"rotateY(-90deg) translateX(-50%) rotateY(0deg) translateX(50%) rotateY(90deg)"});
+    			$('.cube .side').css({"transform":"rotateY(-90deg) translateX(-50%) rotateY(-90deg) translateX(50%) rotateY(90deg)"});
+    		});
+    		$('#toleft').click(function(event) {
+    			$('.cube .side').css({"transform":"rotateY(-90deg) translateX(-50%) rotateY(0deg) translateX(50%) rotateY(90deg)"});
+    			$('.cube .front').css({"transform":"rotateY(-90deg) translateX(-50%) rotateY(90deg) translateX(50%) rotateY(90deg)"});
+    		});
+    	});
+
+    </script>	
+</head>
+<body>
+	<div id="experiment">
+    <div id="cube" class="cube" align="center">
+        <div id="front" class="face front">
+        	<div class="change" id="toleft"><p><</p></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 con">
+            	<div class="head"><p>Taker Sign Up</p></div>
+            	<form action="add_user.php" method="POST">
+            	<label>
+            		<i class="material-icons md-18">create</i>
+            		<input class="in" type="text" name="fname_t" placeholder="Full Name">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">person</i>
+            		<input class="in" type="text" name="user_t" placeholder="Username">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">vpn_key</i>
+            		<input class="in" type="password" name="pass_t" placeholder="Password">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">done_all</i>
+            		<input class="in" type="password" name="cpass_t" placeholder="Confirm Password">
+            	</label>
+            	<input type="submit" value="Sign Up" id="sub1" class="sub">
+            	</form>
+            </div>
+        </div>
+        <div id="side" class="face side">
+        	<div class="change2" id="toright"><p>></p></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 con">
+            	<div class="head"><p>Giver Sign Up</p></div>
+            	<form action="add_user.php" method="POST">
+            	<label>
+            		<i class="material-icons md-18">create</i>
+            		<input class="in" type="text" name="fname_g" placeholder="Full Name">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">person</i>
+            		<input class="in" type="text" name="user_g" placeholder="Username">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">vpn_key</i>
+            		<input class="in" type="password" name="pass_g" placeholder="Password">
+            	</label>
+            	<label>
+            		<i class="material-icons md-18">done_all</i>
+            		<input class="in" type="password" name="cpass_g" placeholder="Confirm Password">
+            	</label>
+            	<input type="submit" value="Sign Up" id="sub2" class="sub">
+            	</form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
